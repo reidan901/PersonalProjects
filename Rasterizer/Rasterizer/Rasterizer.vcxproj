@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SimpleRasterizer\Rasterizer\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SimpleRasterizer\Rasterizer\Dependencies\SFML-2.5.1\include;C:\SimpleRasterizer\Rasterizer\Dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\SimpleRasterizer\Rasterizer\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SimpleRasterizer\Rasterizer\Dependencies\SFML-2.5.1\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -142,7 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CameraSingleton.cpp" />
+    <ClCompile Include="Rasterizer.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TestInput.cpp" />
+    <ClCompile Include="Vert.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraSingleton.h" />
+    <ClInclude Include="Rasterizer.h" />
+    <ClInclude Include="TestInput.h" />
+    <ClInclude Include="Vert.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
